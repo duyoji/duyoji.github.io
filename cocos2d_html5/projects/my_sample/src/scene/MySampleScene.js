@@ -209,7 +209,6 @@ var MySample = cc.LayerGradient.extend({
             this.ship.move(this.touched.x, this.touched.y);
         }
 
-        return;
         for (i = 0, n = this.meteos.length; i < n; i++) {
             meteo = this.meteos[i];
             var isHit = this.hitTest(this.ship, meteo);
