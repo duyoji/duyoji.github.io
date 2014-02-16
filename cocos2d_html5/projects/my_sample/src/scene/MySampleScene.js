@@ -2,7 +2,7 @@
 var Ship = cc.Sprite.extend({
     ctor: function () {
         this._super();
-        this.initWithFile( 'res/ship.png' );
+        this.initWithFile( s_ship );
     },
 
     init: function () {
@@ -33,7 +33,7 @@ var Ship = cc.Sprite.extend({
 var Meteo = cc.Sprite.extend({
     ctor: function () {
         this._super();
-        this.initWithFile( 'res/meteo.png' );
+        this.initWithFile( s_meteo );
         this.v = cc.p( -5, ( Math.random() - 0.5 ) * 3 ); // 隕石の速度   
         this.setColor( cc.c3b( 
                        Math.floor( Math.random()*255 ), 
@@ -111,6 +111,7 @@ var Star = cc.LayerColor.extend({
     },
 });
 
+Star.create = cc.LayerColor.create;
 
 // ゲームオブジェクト群を表示するレイヤー　-----------------------------------------------------------------------------
 var MySample = cc.LayerGradient.extend({
@@ -145,6 +146,12 @@ var MySample = cc.LayerGradient.extend({
         return true;
     },
 
+    onEnter : function () {
+        this._super();
+        var audioEngine = cc.AudioEngine.getInstance();
+        audioEngine.playMusic(s_cyber07, true);
+    },
+
     /**
      * 隕石群の配列生成
      * @return {[type]} [description]
@@ -175,8 +182,9 @@ var MySample = cc.LayerGradient.extend({
         var size   = cc.Director.getInstance().getWinSize();
 
         for (i = 0; i < 50; i++) {
-            star = new Star();
-            star.init( cc.c4b(255, 255, 255, 255), 1, 1);
+            // star = new Star();
+            // star.init( cc.c4b(255, 255, 255, 255), 1, 1);
+            star = Star.create( cc.c4b(255, 255, 255, 255), 1, 1 );
             star.setPosition( Math.random() * size.width,  Math.random() * size.height ) ;
             this.addChild(star, 15);
             stars.push(star);
@@ -236,6 +244,10 @@ var MySample = cc.LayerGradient.extend({
     },
 
     onGameover : function () {
+        var audioEngine = cc.AudioEngine.getInstance();
+        audioEngine.playEffect(s_explosion06, false);
+        audioEngine.stopMusic(s_cyber07);
+
         var transition = cc.TransitionFade.create( 1.0, new ResultScene() );
         cc.Director.getInstance().replaceScene( transition );
     },
