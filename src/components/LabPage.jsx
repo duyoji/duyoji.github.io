@@ -4,7 +4,7 @@ class LabPage extends Component {
   render() {
     return (
       <div>
-        LabPage
+        工事中
       </div>
     );
   }

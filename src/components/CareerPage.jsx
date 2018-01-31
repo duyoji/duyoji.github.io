@@ -4,7 +4,7 @@ class CareerPage extends Component {
   render() {
     return (
       <div>
-        CareerPage
+        工事中
       </div>
     );
   }
