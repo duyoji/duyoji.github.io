@@ -25,31 +25,29 @@ class Header extends Component {
   }
   render() {
     return (
-      <div>
-        <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">automation</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <Link to='/profile'>
-                  <NavLink>Profile</NavLink>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to='/career'>
-                  <NavLink>Career</NavLink>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to='/lab'>
-                  <NavLink>Lab</NavLink>
-                </Link>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
+      <Navbar className="mb-4" color="dark" dark expand="md">
+        <NavbarBrand href="/">automation</NavbarBrand>
+        <NavbarToggler onClick={this.toggle} />
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <Link to='/profile'>
+                <NavLink>Profile</NavLink>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/career'>
+                <NavLink>Career</NavLink>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/lab'>
+                <NavLink>Lab</NavLink>
+              </Link>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
     );
   }
 }
