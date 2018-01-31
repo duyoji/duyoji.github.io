@@ -2,7 +2,7 @@
   "name": "duyoji.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://duyoji.github.io/",
+  "homepage": "https://duyoji.github.io/duyoji.github.io",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "react": "^16.2.0",
