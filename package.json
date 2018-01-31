@@ -4,10 +4,13 @@
   "private": true,
   "homepage": "https://duyoji.github.io/github-page",
   "dependencies": {
+    "bootstrap": "^4.0.0",
     "gh-pages": "^1.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+    "react-scripts": "1.1.0",
+    "react-transition-group": "^2.2.1",
+    "reactstrap": "^5.0.0-beta"
   },
   "scripts": {
     "predeploy": "yarn build",
