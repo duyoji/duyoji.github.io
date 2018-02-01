@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import profileSrc from '../images/profile.jpeg';
+import { Link } from 'react-router-dom';
 import {
   Container,
   Row,
@@ -19,9 +20,10 @@ class ProfilePage extends Component {
             <img className="profile-image" src={profileSrc} alt="profileSrc" />
           </Col>
         </Row>
-        <Row className="mb-5">
+        <Row className="mb-4">
           <Col className="text-center" sm="12" md={{ size: 8, offset: 2 }}>
             <h4>前田 剛 / フリーランスエンジニア</h4>
+            <Link to="/career">経歴</Link>
           </Col>
         </Row>
         <Row className="mb-1">
@@ -29,13 +31,13 @@ class ProfilePage extends Component {
             <h5>スキル</h5>
           </Col>
         </Row>
-        <Row className="mb-3">
+        <Row className="mb-4">
           <Col className="text-center" sm="12" md={{ size: 8, offset: 2 }}>
             <p>JavaScript, Express, React, Redux, Vue, TypeScript, Sequelize, knex, TDD, MySQL, PostgreSQL, Redis, PHP, CakePHP, AWS, Heroku, Git, Java, Objective-C, Perl, HTML, CSS など（LinkedInにもっと細かくスキルの他に職歴なども載せてます。）</p>
           </Col>
         </Row>
 
-        <Row className="mb-3">
+        <Row className="mb-1">
           <Col className="text-center" sm="12" md={{ size: 8, offset: 2 }}>
             <h5>SNSアカウント</h5>
           </Col>
