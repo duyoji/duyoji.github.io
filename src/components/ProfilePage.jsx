@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import {
   Container,
   Row,
-  Col
+  Col,
+  ListGroup,
+  ListGroupItem
 } from 'reactstrap';
 import FontAwesome from 'react-fontawesome'
 import 'font-awesome/css/font-awesome.css'
@@ -36,14 +38,27 @@ class ProfilePage extends Component {
             <p>JavaScript, Express, React, Redux, Vue, TypeScript, Sequelize, knex, TDD, MySQL, PostgreSQL, Redis, PHP, CakePHP, AWS, Heroku, Git, Java, Objective-C, Perl, HTML, CSS など（LinkedInにもっと細かくスキルの他に職歴なども載せてます。）</p>
           </Col>
         </Row>
-
         <Row className="mb-1">
           <Col className="text-center" sm="12" md={{ size: 8, offset: 2 }}>
             <h5>SNSアカウント</h5>
           </Col>
         </Row>
-
         { renderFaIcons() }
+
+        <Row className="mb-1 mt-5">
+          <Col className="text-center" sm="12" md={{ size: 8, offset: 2 }}>
+            <h5>その他</h5>
+          </Col>
+        </Row>
+        <Row className="mb-4">
+          <Col className="text-center" sm="12" md={{ size: 8, offset: 2 }}>
+            <ListGroup>
+              <ListGroupItem><a href="http://duyoji.hatenablog.com/" target="_blank" rel="noopener noreferrer">ブログ（日本語）</a></ListGroupItem>
+              <ListGroupItem><a href="http://tsuyoshi-maeda.hatenablog.com/" target="_blank" rel="noopener noreferrer">ブログ（英語）</a></ListGroupItem>
+              <ListGroupItem><a href="https://qiita.com/duyoji" target="_blank" rel="noopener noreferrer">Qiita</a></ListGroupItem>
+            </ListGroup>
+          </Col>
+        </Row>
       </Container>
     );
   }
