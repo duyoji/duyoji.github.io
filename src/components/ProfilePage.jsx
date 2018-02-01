@@ -3,7 +3,8 @@ import profileSrc from '../images/profile.jpeg';
 import {
   Container,
   Row,
-  Col
+  Col,
+  Table
 } from 'reactstrap';
 import FontAwesome from 'react-fontawesome'
 import 'font-awesome/css/font-awesome.css'
@@ -21,7 +22,23 @@ class ProfilePage extends Component {
         </Row>
         <Row className="mb-5">
           <Col className="text-center" sm="12" md={{ size: 8, offset: 2 }}>
-            <h2>Tsuyoshi Maeda / Freelance Engineer</h2>
+            <h4>前田 剛 / フリーランスエンジニア</h4>
+          </Col>
+        </Row>
+        <Row className="mb-1">
+          <Col className="text-center" sm="12" md={{ size: 8, offset: 2 }}>
+            <h5>スキル</h5>
+          </Col>
+        </Row>
+        <Row className="mb-3">
+          <Col className="text-center" sm="12" md={{ size: 8, offset: 2 }}>
+            <p>JavaScript, Express, React, Redux, Vue, TypeScript, Sequelize, knex, TDD, MySQL, PostgreSQL, Redis, PHP, CakePHP, AWS, Heroku, Git, Java, Objective-C, Perl, HTML, CSS など（LinkedInにもっと細かくスキルの他に職歴なども載せてます。）</p>
+          </Col>
+        </Row>
+
+        <Row className="mb-3">
+          <Col className="text-center" sm="12" md={{ size: 8, offset: 2 }}>
+            <h5>SNSアカウント</h5>
           </Col>
         </Row>
 
@@ -70,7 +87,7 @@ const renderFaIcons = () => {
 
   return faItemsList.map((faItems, index) => {
     return (
-      <Row key={index} className="mb-5">
+      <Row key={index} className="mb-2">
         {faItems.map((faItem, index) => {
           return (
             <Col className="text-center" key={index}>

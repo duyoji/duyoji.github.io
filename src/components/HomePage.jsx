@@ -29,7 +29,7 @@ const sectionItems = [
     links: [
       {
         url: '/contact',
-        text: 'お問い合わせ'
+        text: 'お問い合わせ > E-mail'
       }
     ]
   },
@@ -42,7 +42,7 @@ const sectionItems = [
     links: [
       {
         url: '/contact',
-        text: 'お問い合わせ'
+        text: 'お問い合わせ > E-mail'
       }
     ]
   },
