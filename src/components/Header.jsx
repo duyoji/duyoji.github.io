@@ -4,45 +4,64 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
-  NavItem,
-  NavLink } from 'reactstrap';
+  NavItem } from 'reactstrap';
 
 class Header extends Component {
   constructor(props) {
     super(props);
 
+    this.onClickLink = this.onClickLink.bind(this);
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+
+  onClickLink() {
+    if(this.state.isOpen) {
+      this.toggle();
+    }
+  }
+
   render() {
     return (
       <Navbar className="mb-4" color="dark" dark expand="md">
-        <NavbarBrand href="/">automation</NavbarBrand>
+        {this.state.status}
+        <Link to='/' className="navbar-brand" onClick={this.onClickLink}>
+          automation
+        </Link>
         <NavbarToggler onClick={this.toggle} />
-        <Collapse isOpen={this.state.isOpen} navbar>
+        <Collapse
+          isOpen={this.state.isOpen}
+          onEntered={this.onEntered}
+          onExited={this.onExited}
+          navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <Link to='/profile'>
-                <NavLink>Profile</NavLink>
+              <Link to='/' className="nav-link" onClick={this.onClickLink}>
+                Home
               </Link>
             </NavItem>
             <NavItem>
-              <Link to='/career'>
-                <NavLink>Career</NavLink>
+              <Link to='/profile' className="nav-link" onClick={this.onClickLink}>
+                Profile
               </Link>
             </NavItem>
             <NavItem>
-              <Link to='/lab'>
-                <NavLink>Lab</NavLink>
+              <Link to='/career' className="nav-link" onClick={this.onClickLink}>
+                Career
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/lab' className="nav-link" onClick={this.onClickLink}>
+                Lab
               </Link>
             </NavItem>
           </Nav>
