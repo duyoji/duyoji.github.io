@@ -46,22 +46,22 @@ class Header extends Component {
           <Nav className="ml-auto" navbar>
             <NavItem>
               <Link to='/' className="nav-link" onClick={this.onClickLink}>
-                Home
+                ホーム
               </Link>
             </NavItem>
             <NavItem>
               <Link to='/profile' className="nav-link" onClick={this.onClickLink}>
-                Profile
+                プロフィール
               </Link>
             </NavItem>
             <NavItem>
               <Link to='/career' className="nav-link" onClick={this.onClickLink}>
-                Career
+                経歴
               </Link>
             </NavItem>
             <NavItem>
-              <Link to='/lab' className="nav-link" onClick={this.onClickLink}>
-                Lab
+              <Link to='/contact' className="nav-link" onClick={this.onClickLink}>
+                お問い合わせ
               </Link>
             </NavItem>
           </Nav>
