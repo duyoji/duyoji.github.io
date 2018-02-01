@@ -1,7 +1,7 @@
 #! /bin/bash
 
 if [ -d "static" ]; then
-  rm -rf build/static
+  rm -rf static
 fi
 
 cp build/asset-manifest.json .
