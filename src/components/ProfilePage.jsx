@@ -3,8 +3,7 @@ import profileSrc from '../images/profile.jpeg';
 import {
   Container,
   Row,
-  Col,
-  Table
+  Col
 } from 'reactstrap';
 import FontAwesome from 'react-fontawesome'
 import 'font-awesome/css/font-awesome.css'
@@ -91,7 +90,10 @@ const renderFaIcons = () => {
         {faItems.map((faItem, index) => {
           return (
             <Col className="text-center" key={index}>
-              <a href={faItem.link} style={linkStyle}>
+              <a
+                href={faItem.link}
+                style={linkStyle}
+                target="_blank">
                 <FontAwesome
                   className="super-crazy-colors"
                   name={faItem.name}
