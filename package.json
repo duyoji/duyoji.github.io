@@ -2,7 +2,7 @@
   "name": "duyoji.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://duyoji.github.io/github-page",
+  "homepage": "https://duyoji.github.io",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
