@@ -29,7 +29,7 @@ class ContactPage extends Component {
                 </tr>
                 <tr>
                   <th>E-mail</th>
-                  <td><a href="mailto:tsuyoshi4business@gmail.com">tsuyoshi4business@gmail.com</a></td>
+                  <td>tsuyoshi4business[at]gmail.com (ご連絡の際は[at]を@に置き換えて下さい。)</td>
                 </tr>
                 {/* 最後のtr,tdは最後の行の下にボーダーをつけるためだけにセットしている。 */}
                 <tr>
