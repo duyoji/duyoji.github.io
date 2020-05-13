@@ -35,7 +35,7 @@ class Header extends Component {
       <Navbar className="mb-4" color="dark" dark expand="md">
         {this.state.status}
         <Link to='/' className="navbar-brand" onClick={this.onClickLink}>
-          autoMATIon
+          AUTOMATION
         </Link>
         <NavbarToggler onClick={this.toggle} />
         <Collapse
